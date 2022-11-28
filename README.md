@@ -36,4 +36,4 @@ PUT http://localhost:8000/incredient/update/:id
 ```
 DELETE http://localhost:8000/entry/delete/:id
 ```
-
+Other APIs are updating entries
