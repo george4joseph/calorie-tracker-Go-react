@@ -13,13 +13,14 @@ func main(){
 	router.Use(cors.Default())
 
 	router.POST("/entry/create",routes.AddEntry)
-	router.GET("/entries",router.GetEntries)
-	router.GET("/entry/:id",router.GetEntry)
-	router.GET("/incredients/:id",router.GetIncredients)
+	router.GET("/entries",routes.GetEntries)
+	router.GET("/entry/:id",routes.GetEntryID)
+	router.GET("/incredients/:id",routes.GetEntriesByIncredient)
+	// router.GET("/incredients/:id",routes.GetIncredientsID)
 
-	router.PUT("/entry/update/:id",router.UpdateEntry)
-	router.PUT("/incredient/update/:id",router.UpdateIncredient)
-	router.DELETE("/entry/delete/:id",router.DeleteEntry)
+	router.PUT("/entry/update/:id",routes.UpdateEntry)
+	router.PUT("/incredient/update/:id",routes.UpdateIncredient)
+	router.DELETE("/entry/delete/:id",routes.DeleteEntry)
 
 	router.Run(":8000")
 
